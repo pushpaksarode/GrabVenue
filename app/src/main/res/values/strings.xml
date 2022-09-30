@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">GrabVenue</string>
+
+    <string-array name="sortByValues">
+        <item>A-Z</item>
+        <item>Availability</item>
+    </string-array>
+
+</resources>

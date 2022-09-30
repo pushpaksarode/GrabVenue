@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F1E8E8"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="10sp"
+            android:text="Sort By " />
+
+        <Spinner
+            android:id="@+id/sortBySpin"
+            android:layout_width="150sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#DCD9D9"
+            android:padding="20sp" />
+
+        <TextView
+            android:id="@+id/apptitle"
+            android:layout_width="150sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/ubuntu_medium"
+            android:padding="10sp"
+            android:text="Onhand Venue Booking!"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/venueList"
+        tools:listitem="@layout/activity_venueitemlist" />
+
+
+</LinearLayout>
