@@ -7,31 +7,32 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class UserSettings extends AppCompatActivity {
+public class UserBookingHistory extends AppCompatActivity {
 
-
-    ImageButton profileEdit, homeBtn;
+    ImageButton homeBtn, historyBtn, settingsBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_settings);
+        setContentView(R.layout.activity_user_booking_history);
 
-        profileEdit = findViewById(R.id.profileEdit);
         homeBtn = findViewById(R.id.homeBtn);
-
-        profileEdit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(UserSettings.this, UserAccountSettings.class);
-                startActivity(i);
-            }
-        });
+        historyBtn = findViewById(R.id.historyBtn);
+        settingsBtn = findViewById(R.id.settingsbtn);
 
         homeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(UserSettings.this, HomePage.class);
+                Intent i = new Intent(UserBookingHistory.this, HomePage.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
+        settingsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(UserBookingHistory.this, UserSettings.class);
                 startActivity(i);
                 finish();
             }
